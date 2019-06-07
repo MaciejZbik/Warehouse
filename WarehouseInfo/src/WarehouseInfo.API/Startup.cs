@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -47,6 +47,36 @@ namespace WarehouseInfo.API
             //        castedResolver.NamingStrategy = null;
             //    }
             //});
+
+
+            public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
+            {
+
+                //...
+
+                app.UseCookieAuthentication(new CookieAuthenticationOptions
+                {
+                    AuthenticationScheme = "ApplicationCookie",
+                    AutomaticAuthenticate = true
+                });
+
+                app.UseFacebookAuthentication(new FacebookOptions
+                {
+                    AuthenticationScheme = "Facebook",
+                    AppId = "445861064872347",
+                    AppSecret = "facda4f5sr84gyfb26sq6e8s4y9f2x3z",
+                    SignInScheme = "ApplicationCookie"
+                });
+
+                app.UseStaticFiles();
+
+                app.UseMvc(routes =>
+                {
+                    routes.MapRoute(
+                        name: "default",
+                        template: "{controller=Home}/{action=Index}/{id?}");
+                });
+            }
 
 #if DEBUG
             services.AddTransient<IMailService, LocalMailService>();

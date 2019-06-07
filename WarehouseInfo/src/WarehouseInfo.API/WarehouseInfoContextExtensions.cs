@@ -20,49 +20,49 @@ namespace WarehouseInfo.API
             {
                 new Warehouse()
                 {
-                     Name = "Maciej Żbikowski",
+                     Name = "Janusz",
                      Description = "Zamowienie",
                      PointsOfInterest = new List<PointOfInterest>()
                      {
                          new PointOfInterest() {
-                             Name = "Łóżko 2x2",
-                             Description = "Froma+materac."
+                             Name = "Plecak",
+                             Description = "Czarny skórzany " 
                          },
                           new PointOfInterest() {
-                             Name = "Krzesło",
-                             Description = "Czarne skórzane."
+                             Name = "Portfel ",
+                             Description = "Materiałowy"
                           },
                      }
                 },
                 new Warehouse()
                 {
-                    Name = "Dawid Kowalczyk",
+                    Name = "Maciej",
                     Description = "Przechowanie",
                     PointsOfInterest = new List<PointOfInterest>()
                      {
                          new PointOfInterest() {
-                             Name = "Biurko ",
-                             Description = "Drewniane."
+                             Name = "Meble",
+                             Description = "Stoł + 4 krzesła obite białe."
                          },
                           new PointOfInterest() {
-                             Name = "Stoł",
-                             Description = "Szknaly z drewnianą formą."
+                             Name = "Narzędzia",
+                             Description = "Młotek"
                           },
                      }
                 },
                 new Warehouse()
                 {
-                    Name = "Mariusz Przekrętka",
-                    Description = "Zawmowienie.",
+                    Name = "Agnieszka",
+                    Description = "Zamowienie.",
                     PointsOfInterest = new List<PointOfInterest>()
                      {
                          new PointOfInterest() {
-                             Name = "Zestaw ogrodowy",
-                             Description =  "Stoł + 4 krzesła drewniane ze skorzanym obiciem."
+                             Name = "Meble",
+                             Description = "Szafa czarna."
                          },
                           new PointOfInterest() {
-                             Name = "Fotel",
-                             Description = "Materiałowy."
+                             Name = "Biorko",
+                             Description = "Z regulacją wysokości"
                           },
                      }
                 }

@@ -8,12 +8,12 @@ namespace WarehouseInfo.API.Services
 {
     public interface IWarehouseInfoRepository
     {
-        bool WarehouseExists(int cityId);
+        bool WarehouseExists(int warehouseId);
         IEnumerable<Warehouse> GetItem();
-        Warehouse GetWarehouse(int cityId, bool includePointsOfInterest);
-        IEnumerable<PointOfInterest> GetPointsOfInterestForWarehouse(int cityId);
-        PointOfInterest GetPointOfInterestForWarehouse(int cityId, int pointOfInterestId);
-        void AddPointOfInterestForWarehouse(int cityId, PointOfInterest pointOfInterest);
+        Warehouse GetWarehouse(int warehouseId, bool includePointsOfInterest);
+        IEnumerable<PointOfInterest> GetPointsOfInterestForWarehouse(int warehouseId);
+        PointOfInterest GetPointOfInterestForWarehouse(int warehouseId, int pointOfInterestId);
+        void AddPointOfInterestForWarehouse(int warehouseId, PointOfInterest pointOfInterest);
         void DeletePointOfInterest(PointOfInterest pointOfInterest);
         bool Save();
     }
